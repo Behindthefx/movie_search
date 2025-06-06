@@ -1,0 +1,40 @@
+openapi: 3.0.1
+info:
+  title: Movie Science Search
+  version: 1.0.0
+  description: Search movies related to science topics with overview and MPAA rating.
+servers:
+  - url: https://your-server-url.com
+paths:
+  /movies:
+    get:
+      summary: Search movies by science topic
+      operationId: searchMovies
+      parameters:
+        - name: query
+          in: query
+          required: true
+          schema:
+            type: string
+          description: Science topic (e.g. "gravity", "space", "electricity")
+      responses:
+        "200":
+          description: A list of movies related to the science topic
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  results:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        title:
+                          type: string
+                        release_year:
+                          type: string
+                        overview:
+                          type: string
+                        rating:
+                          type: string
