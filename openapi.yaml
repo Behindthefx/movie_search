@@ -4,7 +4,7 @@ info:
   version: 1.0.0
   description: Search movies related to science topics with overview and MPAA rating.
 servers:
-  - url: https://your-server-url.com
+  - url: https://c4973b24-fd24-4656-b985-0b80c85a385f-00-39be9h4g87phi.spock.replit.dev/
 paths:
   /movies:
     get:
