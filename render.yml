@@ -3,5 +3,5 @@ services:
     name: gpt-action-api
     env: python
     buildCommand: pip install -r requirements.txt
-    startCommand: uvicorn app.py:app --host 0.0.0.0 --port 10000
+    startCommand: uvicorn main.py:app --host 0.0.0.0 --port 10000
     plan: free
