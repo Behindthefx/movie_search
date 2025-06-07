@@ -1,9 +1,14 @@
-from flask import Flask, request, jsonify
+# main.py
+from fastapi import FastAPI
 import json
 import os
 
-app = Flask(__name__)
+app = FastAPI()
 
+@app.get("/")
+def read_root():
+    return {"message": "API is live"}
+    
 # Load NGSS data on startup
 with open("ngss.json") as f:
     ngss_data = json.load(f)
